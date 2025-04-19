@@ -1,8 +1,11 @@
 import Question from "../models/question.model.js";
 
 export const htmlQuestionHandler = async (req, res) => {
+  const limit = 15;
+  const page = parseInt(req.query.page) || 1;
+  const skip = (page -1 ) * limit; 
   try {
-    const htmlQuestions = await Question.find({ topic: "HTML" }).limit(15);
+    const htmlQuestions = await Question.find({ topic: "HTML" }).skip(skip).limit(limit);
     if (!htmlQuestions) {
       return res.status(404).json({ message: "No HTML questions found" });
     }
