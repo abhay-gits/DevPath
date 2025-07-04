@@ -9,19 +9,9 @@ const questionSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    category: {
-        type: String,
-        required: true,
-    },
     topic: {
         type: String,
         required: true,
-    },
-    options: {
-        type: [String],
-        required: function () {
-            return this.category === "MCQ";
-        }
     },
 })
 

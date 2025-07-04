@@ -6,9 +6,7 @@ const Questions = () => {
   interface Question {
     question: string;
     answer: string;
-    category: string;
     topic: string;
-    options?: string[];
   }
 
   const [questions, setQuestions] = useState<Question[]>([]);

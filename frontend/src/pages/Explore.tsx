@@ -1,9 +1,10 @@
 import React from "react";
+import Footer from "../components/Home/Footer";
 
 const ExplorePage: React.FC = () => {
-  const topics = ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"];
+  const programming = ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"];
   const projects = ["Frontend", "Backend", "Fullstack", "Mobile"];
-  const fundamentals = ["Operating Systems", "Networking", "Database",];
+  const fundamentals = ["Operating-System", "Networking", "Database",];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white px-6 py-5">
@@ -21,9 +22,9 @@ const ExplorePage: React.FC = () => {
           Interview Questions
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {topics.map((topic) => (
+          {programming.map((topic) => (
             <a
-              href={`explore/${topic}`}
+              href={`/${topic}`}
               key={topic}
               className="bg-gray-800 opacity-75 hover:bg-gray-700  py-3 rounded-xl text-center cursor-pointer transition border border-gray-600 "
             >
@@ -40,7 +41,7 @@ const ExplorePage: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 ">
           {fundamentals.map((topic) => (
             <a
-              href={`fundamentals/${topic}`}
+              href={`/${topic}`}
               key={topic}
               className="bg-gray-800 opacity-75 hover:bg-gray-700  py-3 rounded-xl text-center cursor-pointer transition border border-gray-600 "
             >
@@ -55,7 +56,7 @@ const ExplorePage: React.FC = () => {
           Roadmaps
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {topics.map((topic) => (
+          {programming.map((topic) => (
             <a
               href={`roadmaps/${topic}`}
               key={topic}

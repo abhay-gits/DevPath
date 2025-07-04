@@ -54,3 +54,19 @@ export const reactQuestionHandler = async (req, res) => {
     return res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
+export const osQuestionHandler = async (req, res) => {
+  const limit = 15;
+  const page = parseInt(req.query.page) || 1;
+  const skip = (page -1 ) * limit; 
+  try {
+    const htmlQuestions = await Question.find({ topic: "OS" }).skip(skip).limit(limit);
+    if (!htmlQuestions) {
+      return res.status(404).json({ message: "No OS questions found" });
+    }
+    res.json(htmlQuestions);
+  } catch (error) {
+    console.error("Error fetching HTML questions:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
