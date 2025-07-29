@@ -7,7 +7,7 @@ import Questions from "./pages/Questions";
 
 const App: React.FC = () => {
   
-  axios.defaults.baseURL = "http://localhost:3000"; 
+  axios.defaults.baseURL = "https://devpath-ewrv.onrender.com"; 
   return (
     <Router>
       <Routes>
