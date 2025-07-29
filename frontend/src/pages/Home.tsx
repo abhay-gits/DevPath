@@ -6,7 +6,7 @@ import Features from "../components/Home/Features.tsx";
 const LandingPage: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black">
-      <div className="text-white py-3 px-5 mb-19">
+      <div className="min-h-screen text-white py-3 px-5 mb-19">
         {/* Header */}
         <header className="mx-auto flex justify-between items-center mb-20">
           <div className="flex items-center space-x-4">

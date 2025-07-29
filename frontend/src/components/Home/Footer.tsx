@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   </div>
   <div>
     <p className="font-bold text-lg">DevPath by 
-      <a className="bg-blue-500 rounded m-2 px-1" href="">@abhayrana</a>
+      <a className="bg-blue-500 rounded m-2 px-1" href="https://github.com/abhay-gits">@abhayrana</a>
       </p>
     <p className="text-sm text-gray-400">
       DevPath is a platform for developers to prepare for tech interviews. It offers curated coding questions, project ideas, and learning paths.

@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Home/Footer";
 
 const ExplorePage: React.FC = () => {
   const programming = ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"];
@@ -42,23 +41,6 @@ const ExplorePage: React.FC = () => {
           {fundamentals.map((topic) => (
             <a
               href={`/${topic}`}
-              key={topic}
-              className="bg-gray-800 opacity-75 hover:bg-gray-700  py-3 rounded-xl text-center cursor-pointer transition border border-gray-600 "
-            >
-              <h3>{topic}</h3>
-            </a>
-          ))}
-        </div>
-      </section>
-      {/* RoadMaps */}
-      <section className="max-w-4xl mx-auto mt-8">
-        <h2 className="text-2xl font-bold mb-6 text-center">
-          Roadmaps
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {programming.map((topic) => (
-            <a
-              href={`roadmaps/${topic}`}
               key={topic}
               className="bg-gray-800 opacity-75 hover:bg-gray-700  py-3 rounded-xl text-center cursor-pointer transition border border-gray-600 "
             >
